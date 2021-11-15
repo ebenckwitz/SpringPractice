@@ -8,7 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StudentDatabaseApplication implements CommandLineRunner{
+public class StudentDatabaseApplication implements CommandLineRunner {
 	@Autowired
 	StudentRepo repository;
 	public static void main(String[] args) {
@@ -16,6 +16,7 @@ public class StudentDatabaseApplication implements CommandLineRunner{
 	}
 	
 	public void run(String... args) throws Exception {
-		repository.save(new Student("Ethan","Benckwitz","ethan@gmail.com"));
+		repository.save(new Student("Ethan", "Benckwitz", "ethan@gmail.com", "123 Street"));
+		repository.save(new Student("FirstName", "lastName", "test@utep.edu", "456 Dr"));
 	}
 }
